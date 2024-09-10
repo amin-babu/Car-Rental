@@ -153,3 +153,70 @@ nav {
 .nav_btns {
   display: none;
 }
+
+@media (width > 768px) {
+  header::before{
+    height: calc(100% - 4rem);
+  }
+
+  nav{
+    position: static;
+    padding-block: 2rem;
+    padding-inline: 1rem;
+    max-width: var(--max-width);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav_header{
+    flex: 1;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .nav_logo a{
+    font-weight: 800;
+    color: var(--text-dark);
+  }
+
+  .nav_menu_btn{
+    display: none;
+  }
+
+  .nav_links{
+    position: static;
+    padding: 0;
+    width: fit-content;
+    flex-direction: row;
+    background-color: transparent;
+    transform: none;
+  }
+
+  .nav_links a{
+    padding-block: 5px;
+    color: var(--text-dark);
+    border-bottom: 2px solid transparent;
+  }
+
+  .nav_links a:hover{
+    border-color: var(--primary-color);
+  }
+
+  .nav_links_btn{
+    display: none;
+  }
+
+  .nav_btns{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .nav_btns .btn_primary{
+    color: var(--text-dark);
+    background-color: transparent;
+  }
+}
